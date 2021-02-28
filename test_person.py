@@ -15,3 +15,7 @@ class TestPerson:
     def test_compare_age_equal(self):
         person = Person('Viktor', 22)
         assert person.compare_age() == 'Viktor is the same age as me.'
+
+    def test_negative_compare_age(self):
+        person = Person('I', -1)
+        assert person.compare_age() == "Person's age can't be a negative number"

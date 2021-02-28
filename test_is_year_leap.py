@@ -14,4 +14,4 @@ class TestIsYearLeap:
         assert is_year_leap(year) is False
 
     def test_negative_is_leap(self):
-        assert is_year_leap(-4) is None
+        assert is_year_leap(-4) is "Year can't be negative number"

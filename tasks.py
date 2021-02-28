@@ -19,12 +19,12 @@ def count_profit(data):
 
 # 4
 def square_area(radius):
-    return radius**2 + radius**2
+    return radius ** 2 + radius ** 2
 
 
 # 5
 def list_of_multiples(number, length):
-    my_list = [number * i for i in range(1, length+1)]
+    my_list = [number * i for i in range(1, length + 1)]
     return my_list
 
 
@@ -40,26 +40,28 @@ def date_formatted(date):
 
 
 # 7
-def check_lines(a1, b1, a2, b2):
+def check_lines(l1, l2):
+    a1, b1, a2, b2 = l1[0], l1[1], l2[0], l2[1]
     if a1 * b2 - a2 * b1 == 0:
         return True
     else:
         return False
 
+
 # 8
-def vol_shell (r1, r2):
+def vol_shell(r1, r2):
     import math
-    R = abs (r1)
-    r = abs (r2)
+    R = abs(r1)
+    r = abs(r2)
     if R < r:
         R, r = r, R
     v_betw_sph = 4 / 3 * math.pi * (R ** 3 - r ** 3)
     if v_betw_sph >= 0:
-        return v_betw_sph
+        return round(v_betw_sph, 3)
 
 
 # 9
-def identify_student (name):
+def identify_student(name):
     GUEST_LIST = {
         "Randy": "Germany",
         "Karla": "France",
@@ -80,7 +82,7 @@ def stupid_addition(param1, param2):
         str_param = str(param1) + str(param2)
         return str_param
     elif type(param1) == str and type(param2) == str:
-        sum_param = int(param1) + int (param2)
+        sum_param = int(param1) + int(param2)
         return sum_param
     else:
         return None
@@ -103,10 +105,10 @@ def is_repdigit(number):
 
 
 # 12
-def concat(n):
+def concat(*n):
     full_list = []
     for item in n:
-        for i in range (len(item)):
-            full_list.append (item[i])
+        for i in range(len(item)):
+            full_list.append(item[i])
     sort_full_list = sorted(full_list)
     return sort_full_list

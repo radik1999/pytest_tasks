@@ -12,4 +12,5 @@ class TestIdentifyStudent:
     def test_identify_student(self, name, greeting):
         assert identify_student(name) == greeting
 
-
+    def test_negative_identify_student(self):
+        assert identify_student(1) == 'str required'

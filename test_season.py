@@ -12,4 +12,4 @@ class TestSeason:
         assert season(number_of_month) == seas
 
     def test_negative_season(self):
-        assert season(21) is None
+        assert season(21) is "There isn't such month"
