@@ -10,3 +10,7 @@ class TestBank:
     def test_bank(self, money, number_of_years, result):
         assert bank(money, number_of_years) == result
 
+    @pytest.mark.parametrize('money, number_of_years, result', [(-50, 4, 'Amount of money has to be greater then 0'),
+                                                                (100, -2, 'Years can\'t be a negative number')])
+    def test_negative_bank(self, money, number_of_years, result):
+        assert bank(money, number_of_years) == result

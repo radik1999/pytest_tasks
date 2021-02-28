@@ -17,4 +17,4 @@ class TestDoor:
     def test_negative_toggle_door(self):
         door = ToggleDoor('red', status='close')
         door.toggle()
-        assert door.status == 'open'
+        assert door.status == 'Status in the instant creation isn\'t correct'

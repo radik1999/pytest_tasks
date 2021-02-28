@@ -11,3 +11,5 @@ class TestSquare:
     def test_square(self, side, result):
         assert square(side) == result
 
+    def test_negative_square(self):
+        assert square(-1) == 'A quadratic side has to be positive number'

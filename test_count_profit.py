@@ -16,10 +16,10 @@ class TestCountProfit:
              "inventory": 1200
          }, 14796),
         ({
-            "cost_price": 2.77,
-            "sell_price": 7.95,
-            "inventory": 8500
-        }, 44030)
+             "cost_price": 2.77,
+             "sell_price": 7.95,
+             "inventory": 8500
+         }, 44030)
     ])
     def test_count_profit(self, data, profit):
         assert count_profit(data) == profit
